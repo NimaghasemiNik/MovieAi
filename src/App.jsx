@@ -1,14 +1,17 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
-        Welcome to MovieAI
-      </h1>
-      <p className="mt-4 text-lg text-green-800">
-        This is an AI-powered movie web application.
-      </p>
+      <main>
+        <Routes>
+          <Route path="/movie/:id" element={<h1>Movie Information</h1>} />
+          <Route path="/actors/:id" element={<h1>Actors</h1>} />
+          <Route path="/" element={<h1>Movies</h1>} />
+          <Route path="/profile/:id" element={<h1>Profile</h1>} />
+        </Routes>
+      </main>
     </div>
   )
 }
