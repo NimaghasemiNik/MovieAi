@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@layer components {
+  .root {
+    @apply flex h-full;
+  }
+
+  .toolbar {
+    @apply h-[70px];
+  }
+
+  .content {
+    @apply flex-grow p-8 w-full;
+  }
+}
